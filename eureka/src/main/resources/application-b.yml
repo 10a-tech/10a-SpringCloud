@@ -1,0 +1,16 @@
+spring:
+  application:
+    # 服务名称
+    name: eureka
+server:
+  port: 1112
+eureka:
+  instance:
+    hostname: eureka-b
+  client:
+    # 自己不注册到注册中心
+    register-with-eureka: true
+    # 从注册中心获取注册信息
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:1111/eureka
